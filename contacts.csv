@@ -1,16 +1,90 @@
-﻿num,Name,Email
-1,TAJRIBA,ybouih92@gmail.com
-2,TAJRIBA_2,bouih2004@hotmail.com
-3,Petra,dahlbergpetra@gmail.com
-4,Stefan,stefan@trollheden.se
-5,Linda,lagergren8@gmail.com
-6,Lotta,lssombud@autismjonkoping.se
-7,Ingela,glivingingela@gmail.com
-8,Lulu,lulu@lautisma.se
-9,Mona,mona@ungerkonsult.se
-10,Magdalena,mzeiherrecht@gmail.com
-11,Birgitta,birgitta.aner@telia.com
-12,Autism,varmland@autism.se
-13,Cecilia,ceciliabronemyr@gmail.com
-14,Anita,edstromanita@gmail.com
-15,Lilia,vastmanland@autism.se
+﻿ID,Name,Geschlecht,Unternehmen,Email
+1,first_try,0,Erste-FIRMA-Name,ybouih92@gmail.com
+2,second_try,1,charikate_dajaj,bouih2004@hotmail.com      
+3,NULL,2,Telekom plus,ysn.bh24@gmail.com
+4,Lindas,1,Mercedes Benz,Fachinformatiker@yahoo.com
+5,Schneider,1,Deutsche IT Solutions GmbH,hr@deutscheit.de
+6,Müller,0,CodeWerk AG,ausbildung@codewerk.de
+7,Lehmann,1,SoftVision GmbH,karriere@softvision.de
+8,Keller,0,Informatik Systeme Berlin GmbH,bewerbung@isb.de
+9,Bauer,1,NextGen IT Services,info@nextgen-it.de
+10,Schmidt,0,AlphaSoft GmbH,ausbildung@alphasoft.de
+11,Fischer,1,DatenHaus AG,hr@datenhaus.de
+12,Weber,0,TechPlus GmbH,karriere@techplus.de
+13,Hoffmann,1,DigitalWerk München,bewerbung@digitalwerk.de
+14,NULL,2,IT Solution Group Berlin,info@itsg.de
+15,Becker,1,CodingStars GmbH,ausbildung@codingstars.de
+16,Meier,0,ByteFactory AG,karriere@bytefactory.de
+17,Schulz,1,WebTec GmbH,bewerbung@webtec.de
+18,Brandt,0,ITVision AG,hr@itvision.de
+19,König,1,CodePoint Solutions,info@codepoint.de
+20,Hartmann,0,FutureSoft GmbH,ausbildung@futuresoft.de
+21,Neumann,1,InnovaTech AG,karriere@innovatech.de
+22,NULL,2,DataSystems GmbH,bewerbung@datasystems.de
+23,Zimmermann,1,NextLevel IT,hr@nextlevel.de
+24,Braun,0,SmartCode Solutions,karriere@smartcode.de
+25,Krüger,1,ByteLabs AG,info@bytelabs.de
+26,Hofmann,0,SoftLine GmbH,ausbildung@softline.de
+27,Richter,1,CompuVision AG,bewerbung@compuvision.de
+28,Wolf,0,LogicNet GmbH,karriere@logicnet.de
+29,Schröder,1,NetSoft AG,hr@netsoft.de
+30,Krause,0,DevSystems GmbH,info@devsystems.de
+31,Lang,1,CodeCraft AG,bewerbung@codecraft.de
+32,Weiß,0,DataVision GmbH,karriere@datavision.de
+33,Huber,1,InformatikZentrum München,ausbildung@izm.de
+34,Maier,0,WebLabs AG,hr@weblabs.de
+35,Kaiser,1,ITK Group,bewerbung@itkgroup.de
+36,Fuchs,0,CodeConnect GmbH,karriere@codeconnect.de
+37,Peters,1,DigitalNet AG,info@digitalnet.de
+38,Jung,0,NextByte Solutions,bewerbung@nextbyte.de
+39,Vogel,1,SoftTech GmbH,ausbildung@softtech.de
+40,Keller,0,CompuPlus AG,karriere@compuplus.de
+41,Graf,1,Innova Systems,bewerbung@innovasystems.de
+42,Böhm,0,DataExperts GmbH,info@dataexperts.de
+43,NULL,2,ITConsult AG,karriere@itconsult.de
+44,Albrecht,0,CodeLogic GmbH,bewerbung@codelogic.de
+45,Schuster,1,WebExperts AG,ausbildung@webexperts.de
+46,Lange,0,SmartIT Solutions,hr@smartit.de
+47,Sommer,1,NetLine GmbH,bewerbung@netline.de
+48,Walter,0,ITPro AG,karriere@itpro.de
+49,Kuhn,1,CodeStream GmbH,info@codestream.de
+50,Mayer,0,ByteNet AG,bewerbung@bytenet.de
+51,Arnold,1,SoftLink GmbH,karriere@softlink.de
+52,Klein,0,TechWorld AG,hr@techworld.de
+53,Simon,1,InformatikPro GmbH,bewerbung@informatikpro.de
+54,Werner,0,DevPoint Solutions,ausbildung@devpoint.de
+55,Krämer,1,DigitalTec GmbH,info@digitaltec.de
+56,Schäfer,0,WebLine AG,karriere@webline.de
+57,Ott,1,ITProjekt GmbH,bewerbung@itprojekt.de
+58,Ludwig,0,SoftVision AG,ausbildung@softvision-ag.de
+59,Bergmann,1,DataLink GmbH,info@datalink.de
+60,Roth,0,CodingHaus AG,bewerbung@codinghaus.de
+61,Engel,1,CompuCenter GmbH,karriere@compucenter.de
+62,Busch,0,NetzwerkPro AG,hr@netzwerkpro.de
+63,Seidel,1,TechConnect GmbH,bewerbung@techconnect.de
+64,Jakob,0,InnovaSoft AG,ausbildung@innovasoft.de
+65,Haas,1,DataWorks GmbH,karriere@dataworks.de
+66,Schreiber,0,SmartVision AG,bewerbung@smartvision.de
+67,Koch,1,ITExperts GmbH,info@itexperts.de
+68,Arnold,0,CodingTeam AG,karriere@codingteam.de
+69,Günther,1,NetVision GmbH,bewerbung@netvision.de
+70,Voigt,0,SoftPro AG,hr@softpro.de
+71,Böhm,1,CodeBase GmbH,ausbildung@codebase.de
+72,Martin,0,WebSolutions AG,bewerbung@websolutions.de
+73,Stein,1,ITManufaktur GmbH,karriere@itmanufaktur.de
+74,Lenz,0,DevLab AG,info@devlab.de
+75,Scholz,1,InformatikTeam GmbH,bewerbung@informatikteam.de
+76,Heinrich,0,DataSoft AG,ausbildung@datasoft.de
+77,Beck,1,SmartTech GmbH,karriere@smarttech.de
+78,Ulrich,0,NextCode AG,bewerbung@nextcode.de
+79,Dietrich,1,ByteSystems GmbH,hr@bytesystems.de
+80,Schumacher,0,ITWorks AG,info@itworks.de
+81,Schulte,1,SoftNet GmbH,bewerbung@softnet.de
+82,Fritz,0,CodingWorld AG,karriere@codingworld.de
+83,Brunner,1,DataPlus GmbH,ausbildung@dataplus.de
+84,Brand,0,WebCraft AG,bewerbung@webcraft.de
+85,Kühn,1,ITStudio GmbH,info@itstudio.de
+86,Hauser,0,CodeSystems AG,karriere@codesystems.de
+87,Kirsch,1,NextIT GmbH,bewerbung@nextit.de
+88,Busse,0,DigitalFactory AG,ausbildung@digitalfactory.de
+89,Ritter,1,InnovaLine GmbH,hr@innovaline.de

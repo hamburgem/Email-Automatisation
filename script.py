@@ -9,7 +9,7 @@ from email.mime.application import MIMEApplication
 
 # Credentials input
 EMAIL_ADDRESS = input("📧 Enter your Gmail address: ")
-EMAIL_PASSWORD = getpass.getpass("🔐 Enter your 16-digit App Password (not your Gmail password): ")
+EMAIL_PASSWORD = getpass.getpass("🔐 Enter your 16-digit App Password: ")
 
 # Test login first
 try:
@@ -32,8 +32,10 @@ with open('contacts.csv', newline='', encoding='utf-8-sig') as csvfile:
 
     for row in reader:
         print("Current row:", row)
-        name = row.get('Name', '').strip()
-        email = row.get('Email', '').strip()
+        name = row.get('Name').strip()
+        email = row.get('Email').strip()
+        unternehmen= row.get('Unternehmen')
+        geschlecht = row.get('Geschlecht')
 
         if not name or not email:
             print("⚠️ Skipping row with missing data:", row)
@@ -41,45 +43,46 @@ with open('contacts.csv', newline='', encoding='utf-8-sig') as csvfile:
 
         print(f"📤 Preparing to send to: {name} ({email})")
 
+        if geschlecht==0:
+            NAME= f"geehrte Frau {name}"
+        elif geschlecht==1:
+            NAME= f"geehrter Herr {name}"
+        else:
+            NAME= f"geehrtes Team der {unternehmen}"
+
         # Email body
-        body = f"""Sehr geehrtes Team der {name},
+        body = f"""Sehr {NAME},
 
 ich hoffe, diese Nachricht erreicht Sie wohlbehalten.
 
-Mein Name ist Yassin Bouih und ich befinde mich derzeit im dritten Jahr meines Bachelorstudiums im Bereich Künstliche Intelligenz an der Ibn Tofail Universität in Marokko. Ich rechne mit meinem Abschluss im Juli 2026 und einem Notendurchschnitt von etwa 13/20 (entspricht ca. 2,6–3,5). Derzeit bereite ich mich auf die B2-Prüfung in Deutsch (ÖSD) vor, die ich bis Januar 2026 abschließen möchte. Außerdem plane ich, Anfang 2026 die IELTS-Prüfung in Englisch abzulegen.
+Mit großem Interesse habe ich Ihre Anzeige für den Ausbildungsplatz als Fachinformatiker für Anwendungsentwicklung gelesen. Gerne bewerbe ich mich hiermit auf diese Stelle.
 
-Ich interessiere mich sehr für den Masterstudiengang Data Science und Künstliche Intelligenz zum Wintersemester 2026 und wäre Ihnen dankbar, wenn Sie mir folgende Fragen beantworten könnten:
+Kurz zu mir: Ich studiere derzeit im dritten Jahr Informatik an einer Universität in Marokko. Ich habe praktische Kenntnisse in C/C++, Python(Pandas, NumPy, Matplotlib, Sklearn), MySQL, HTML/CSS/JavaScript(jQuery, React, Node.js) sowie in Computernetzwerke und arbeite gerne praxisorientiert an IT-Lösungen. Meine Deutschkenntnisse liegen auf B2-Niveau und ich bin sehr motiviert, die Ausbildung in Deutschland zu beginnen.
 
-Bewerbungszeitraum:
-Wann beginnt und endet die Bewerbungsfrist für internationale Studierende für das Wintersemester 2026?
-Kann ich mich mit einem vorläufigen Zeugnis bewerben, obwohl mein Abschluss noch aussteht?
-Ist es möglich, sich zu bewerben, auch wenn das B2-Zertifikat noch nicht vorliegt, und dieses vor der Immatrikulation nachzureichen?
+Meinen Lebenslauf finden Sie im Anhang.
 
-Zulassungsvoraussetzungen:
-Reicht ein B2-Zertifikat (ÖSD) aus oder wird DSH/TestDaF zwingend verlangt?
-Gibt es eine Mindestnote für Bewerber*innen aus Marokko?
 
-Bewerbungsprozess:
-Läuft die Bewerbung über Uni-Assist oder direkt über Ihre Hochschule?
-Wann werden die Zulassungsentscheidungen in der Regel bekanntgegeben?
+Ich hätte noch ein paar Fragen und würde mich über eine kurze Rückmeldung freuen:
 
-Gerne sende ich Ihnen bei Bedarf meinen Lebenslauf als PDF zur ersten Durchsicht zu.
+- Ist eine Bewerbung aus dem Ausland (Marokko) möglich und geben Sie ausländischen Bewerbern eine Chance auf einen Ausbildungsplatz?
+- Reicht ein Nachweis von Deutsch B2 aus, oder fordern Sie höhere Sprachkenntnisse/Zertifikate?
+- Welche Bewerbungsunterlagen benötigen Sie in meinem Fall (zusätzliche Zeugnisse, Zeugnisanerkennung, Sprachzertifikat o.ä.)?
+- Gibt es ein Online-Bewerbungsportal oder genügt diese E-Mail als Erstkontakt?
+- Besteht die Möglichkeit für ein kurzes persönliches oder digitales Gespräch (Telefon/Video), um Erwartungen und Ablauf zu klären? Ich bin werktags in der Regel ab 10:00 Uhr (UTC+2) verfügbar — nennen Sie mir gern einen für Sie passenden Termin.
 
-Ich danke Ihnen herzlich für Ihre Zeit und Unterstützung und freue mich auf Ihre Rückmeldung.
+Ich freue mich auf Ihre positive Rückmeldung und stehe Ihnen für Rückfragen oder zum Zusenden weiterer Unterlagen jederzeit zur Verfügung.
 
 Mit freundlichen Grüßen
 Yassin Bouih
 Email: yassine.bouih@uit.ac.ma  
-Phone: +212 6 89 9013 63  
-Current University: Ibn Tofail University, Morocco  
-Expected Graduation: July 2026  
+Phone: +212 689 901 363    
 """
 
         # Build message
         msg = MIMEMultipart()
         msg['From'] = EMAIL_ADDRESS
         msg['To'] = email
-        msg['Subject'] = "Anfrage zum Masterstudiengang Data Science und Künstliche Intelligenz – Wintersemester 2026"
+        msg['Subject'] = "Bewerbung und Anfrage zur Ausbildung als Fachinformatiker für Anwendungsentwicklung"
         msg.attach(MIMEText(body, 'plain'))
 
         # Attach PDF
@@ -97,4 +100,4 @@ Expected Graduation: July 2026
         except Exception as e:
             print(f"❌ Failed to send to {email}: {e}")
 
-        time.sleep(540)  # Avoid spam flags 5 min...
+        time.sleep(300)  # Avoid spam flags 5 min...
